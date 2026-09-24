@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payal Beauty Laser Saloon | Beauty Products &amp; Men's Barbershop | Mississauga, ON</title>
+<meta name="description" content="Payal Beauty Laser Saloon in Mississauga, Ontario, led by Erum Shahzadi. Professional beauty products for sale plus a full men's barbershop — haircuts, beard trims, hot towel shaves and more.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#3f3330">
+<meta property="og:title" content="Payal Beauty Laser Saloon | Mississauga, ON">
+<meta property="og:description" content="Beauty products for sale plus a full men's barbershop — haircuts, beard trims, hot towel shaves and more — 7066 Airport Rd, Mississauga, ON.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf7f2;
+    --white:#ffffff;
+    --paper:#f2ece1;
+    --ink:#241e1b;
+    --ink-soft:#584c45;
+    --taupe:#8a7c72;
+    --line:#e4dace;
+    --gold:#c2913f;
+    --gold-dark:#9a6d24;
+    --gold-light:#f0dcb4;
+    --brand:#3f3330;
+    --brand-dark:#2a2220;
+    --brand-light:#7a655c;
+    --blush:#e9d7ce;
+    --shadow:0 24px 50px -28px rgba(33,26,23,0.4);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.7;
+    overflow-x:hidden;
+    font-weight:400;
+  }
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--ink);letter-spacing:0.01em;}
+  h1 em, h2 em{font-style:normal;color:var(--gold-dark);}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;object-fit:cover;}
+  ul{list-style:none;}
+  .container{width:min(1180px,92%);margin-inline:auto;}
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.74rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    font-weight:700;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);display:inline-block;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:15px 34px;
+    border-radius:2px;
+    font-weight:600;
+    font-size:0.85rem;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+    cursor:pointer;
+    border:1px solid transparent;
+  }
+  .btn-primary{
+    background:var(--brand);
+    color:#fff;
+    box-shadow:0 14px 30px -14px rgba(58,47,43,0.5);
+  }
+  .btn-primary:hover{background:var(--brand-dark);transform:translateY(-2px);}
+  .btn-outline{
+    background:transparent;
+    border:1px solid var(--brand);
+    color:var(--brand);
+  }
+  .btn-outline:hover{background:var(--brand);color:#fff;transform:translateY(-2px);}
+
+  /* ===== Announcement bar ===== */
+  .topbar{
+    background:var(--brand-dark);
+    color:#efe6da;
+    font-size:0.78rem;
+    padding:10px 0;
+    font-weight:500;
+  }
+  .topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .topbar a{color:var(--gold-light);font-weight:700;}
+  .topbar .tb-links{display:flex;gap:22px;flex-wrap:wrap;}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,247,242,0.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .logo{display:flex;align-items:center;gap:13px;}
+  .logo-mark{width:52px;height:52px;flex-shrink:0;}
+  .logo-mark img{width:100%;height:100%;object-fit:contain;}
+  .logo-text .name{
+    font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;line-height:1;
+    letter-spacing:0.14em;color:var(--brand);
+  }
+  .logo-text .sub{
+    font-size:0.56rem;letter-spacing:0.24em;text-transform:uppercase;
+    color:var(--gold-dark);font-weight:600;margin-top:4px;
+  }
+  @media(max-width:520px){
+    .logo-mark{width:42px;height:42px;}
+    .logo-text .name{font-size:1.2rem;}
+    .logo-text .sub{font-size:0.5rem;letter-spacing:0.18em;}
+  }
+  .nav-links{display:flex;align-items:center;gap:32px;}
+  .nav-links a{
+    font-size:0.82rem;font-weight:500;color:var(--ink-soft);
+    letter-spacing:0.03em;
+    position:relative;padding:4px 0;
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;
+    background:var(--gold-dark);transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ink);}
+
+  @media(max-width:900px){
+    .nav-links{
+      position:fixed;inset:0 0 0 28%;
+      background:var(--white);
+      flex-direction:column;
+      justify-content:center;
+      gap:26px;
+      transform:translateX(100%);
+      transition:transform .35s ease;
+      box-shadow:-10px 0 40px rgba(0,0,0,0.12);
+    }
+    .nav-links.open{transform:translateX(0);}
+    .menu-toggle{display:block;}
+    .nav-cta .btn-primary{display:none;}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:70px 0 0;
+    background:var(--paper);
+  }
+  .hero .container{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;}
+  .hero-copy{padding:70px 56px 70px 0;display:flex;flex-direction:column;justify-content:center;}
+  .hero-copy h1{font-size:clamp(2.3rem,4.2vw,3.5rem);line-height:1.16;margin-bottom:22px;font-weight:700;}
+  .hero-copy p{font-size:1.05rem;color:var(--ink-soft);max-width:46ch;margin-bottom:34px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px;}
+  .hero-stats{display:flex;gap:38px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px;}
+  .hero-stats div{display:flex;flex-direction:column;}
+  .hero-stats .num{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:700;color:var(--gold-dark);}
+  .hero-stats .lbl{font-size:0.76rem;color:var(--ink-soft);letter-spacing:0.03em;font-weight:500;}
+
+  .hero-visual{position:relative;min-height:520px;}
+  .hero-visual::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg, rgba(42,34,31,0.45), transparent 45%);
+  }
+  .hero-visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;background:var(--blush);}
+  .hero-card{
+    position:absolute;left:-40px;bottom:40px;
+    background:var(--brand);
+    color:#fff;
+    padding:22px 26px;
+    box-shadow:var(--shadow);
+    max-width:270px;
+    border-left:4px solid var(--gold);
+    z-index:2;
+  }
+  .hero-card strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.2rem;margin-bottom:6px;color:#fff;}
+  .hero-card span{font-size:0.82rem;color:var(--gold-light);}
+
+  @media(max-width:900px){
+    .hero .container{grid-template-columns:1fr;}
+    .hero-copy{padding:50px 0 40px;}
+    .hero-visual{min-height:340px;}
+    .hero-card{left:16px;bottom:-30px;max-width:220px;padding:16px 18px;}
+  }
+
+  /* ===== Section shared ===== */
+  section{padding:100px 0;}
+  .section-head{text-align:center;max-width:620px;margin:0 auto 60px;}
+  .section-head h2{font-size:clamp(1.95rem,3vw,2.6rem);position:relative;padding-bottom:18px;}
+  .section-head h2::after{
+    content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:56px;height:3px;background:var(--gold);
+  }
+  .section-head p{color:var(--ink-soft);margin-top:14px;font-size:0.98rem;}
+
+  /* ===== About ===== */
+  .about{background:var(--white);}
+  .about .container{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center;}
+  .about-portrait{position:relative;}
+  .about-portrait img{
+    width:100%;aspect-ratio:4/5;border-radius:2px;box-shadow:var(--shadow);background:var(--blush);
+  }
+  .about-portrait .frame-tag{
+    position:absolute;bottom:-24px;right:-24px;
+    background:var(--brand);color:#fff;
+    padding:16px 20px;
+    font-size:0.8rem;font-weight:500;max-width:220px;
+  }
+  .about-portrait .frame-tag strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--gold-light);margin-bottom:2px;}
+  .about-copy h2{margin-bottom:18px;}
+  .about-copy p{color:var(--ink-soft);margin-bottom:16px;}
+  .about-points{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:34px;border:1px solid var(--line);}
+  .point{
+    display:flex;gap:14px;align-items:flex-start;
+    background:var(--white);
+    padding:20px;
+    transition:background .25s ease;
+  }
+  .point:hover{background:var(--paper);}
+  .point .ico{font-size:1.4rem;line-height:1;flex-shrink:0;color:var(--gold-dark);}
+  .point strong{display:block;font-size:0.92rem;margin-bottom:3px;font-family:'Inter',sans-serif;font-weight:700;color:var(--ink);}
+  .point span{font-size:0.8rem;color:var(--ink-soft);}
+
+  @media(max-width:900px){
+    .about .container{grid-template-columns:1fr;}
+    .about-points{grid-template-columns:1fr;}
+    .about-portrait .frame-tag{position:static;margin-top:16px;max-width:none;}
+  }
+
+  /* ===== Services ===== */
+  .services{background:var(--paper);}
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--white);
+    overflow:hidden;
+    transition:box-shadow .25s ease, transform .25s ease;
+    position:relative;
+  }
+  .service-card::before{
+    content:"";position:absolute;left:0;top:0;width:3px;height:0;background:var(--gold);transition:height .3s ease;
+  }
+  .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .service-card:hover::before{height:100%;}
+  .service-card .thumb{height:170px;overflow:hidden;background:var(--blush);}
+  .service-card .thumb img{width:100%;height:100%;transition:transform .5s ease;}
+  .service-card:hover .thumb img{transform:scale(1.06);}
+  .service-card .body{padding:24px 22px;}
+  .service-card h3{font-size:1.2rem;margin-bottom:8px;font-weight:700;color:var(--ink);}
+  .service-card p{font-size:0.85rem;color:var(--ink-soft);}
+
+  /* ===== Products ===== */
+  .products{background:var(--white);}
+  .products-wrap{
+    background:linear-gradient(135deg,var(--brand-dark),var(--brand) 140%);
+    padding:56px 50px;
+    color:#fff;
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:50px;
+    align-items:center;
+  }
+  .products-copy .eyebrow{color:var(--gold-light);}
+  .products-copy .eyebrow::before{background:var(--gold-light);}
+  .products-copy h2{color:#fff;margin-bottom:16px;}
+  .products-copy p{color:rgba(255,255,255,0.82);}
+  .product-tags{display:flex;flex-wrap:wrap;gap:10px;}
+  .product-tags span{
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.28);
+    padding:9px 16px;
+    font-size:0.8rem;
+    font-weight:500;
+    color:#fff;
+  }
+  @media(max-width:900px){
+    .products-wrap{grid-template-columns:1fr;padding:40px 26px;}
+  }
+
+  .shop-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .shop-card{background:var(--white);overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;}
+  .shop-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);z-index:1;position:relative;}
+  .shop-thumb{height:160px;overflow:hidden;background:var(--blush);}
+  .shop-thumb img{width:100%;height:100%;transition:transform .5s ease;}
+  .shop-card:hover .shop-thumb img{transform:scale(1.06);}
+  .shop-body{padding:18px 18px 22px;}
+  .shop-cat{font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;}
+  .shop-body h4{font-family:'Inter',sans-serif;font-size:0.92rem;font-weight:600;color:var(--ink);margin:8px 0 10px;line-height:1.35;}
+  .shop-price{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--brand);}
+  .shop-note{text-align:center;font-size:0.8rem;color:var(--taupe);margin-top:22px;}
+
+  /* ===== Gallery ===== */
+  .gallery{background:var(--paper);}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:190px;
+    gap:6px;
+  }
+  .gallery-grid a{position:relative;overflow:hidden;display:block;}
+  .gallery-grid a::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg, rgba(42,34,31,0.6), transparent 55%);
+    opacity:0;transition:opacity .3s ease;
+  }
+  .gallery-grid a:hover::after{opacity:1;}
+  .gallery-grid img{width:100%;height:100%;transition:transform .5s ease;}
+  .gallery-grid a:hover img{transform:scale(1.07);}
+  .g1{grid-column:span 2;grid-row:span 2;}
+  .g5{grid-column:span 2;}
+
+  @media(max-width:760px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;}
+    .g1{grid-column:span 2;}
+    .g5{grid-column:span 2;}
+  }
+
+  /* ===== Testimonials ===== */
+  .testimonials{background:var(--white);}
+  .t-marquee{
+    width:100%;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  }
+  .t-track{
+    display:flex;
+    gap:1px;
+    width:max-content;
+    background:var(--line);
+    animation:marquee 42s linear infinite;
+  }
+  .t-marquee:hover .t-track{animation-play-state:paused;}
+  @keyframes marquee{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  .t-card{background:var(--white);padding:34px 30px;width:320px;flex-shrink:0;}
+  .t-card .stars{color:var(--gold-dark);letter-spacing:2px;margin-bottom:16px;font-size:0.95rem;}
+  .t-card p{font-size:0.92rem;color:var(--ink-soft);margin-bottom:20px;font-style:italic;min-height:96px;}
+  .t-name{display:flex;align-items:center;gap:12px;}
+  .t-avatar{
+    width:40px;height:40px;border-radius:50%;
+    background:var(--brand);
+    display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-weight:700;font-family:'Cormorant Garamond',serif;
+    flex-shrink:0;
+  }
+  .t-name strong{font-size:0.86rem;display:block;font-family:'Inter',sans-serif;font-weight:700;color:var(--ink);}
+  .t-name span{font-size:0.75rem;color:var(--ink-soft);}
+  @media(max-width:600px){
+    .t-card{width:270px;padding:28px 22px;}
+  }
+
+  /* ===== Contact ===== */
+  .contact{background:var(--paper);}
+  .contact-wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;
+    background:var(--white);
+    box-shadow:var(--shadow);
+  }
+  .contact-info{padding:50px;}
+  .contact-info h2{margin-bottom:18px;}
+  .contact-info p.lead{color:var(--ink-soft);margin-bottom:30px;}
+  .info-row{display:flex;gap:16px;margin-bottom:22px;align-items:flex-start;}
+  .info-row .ico{font-size:1.1rem;color:var(--gold-dark);width:24px;flex-shrink:0;}
+  .info-row strong{display:block;font-size:0.88rem;margin-bottom:3px;color:var(--ink);}
+  .info-row span, .info-row a{font-size:0.85rem;color:var(--ink-soft);}
+  .info-row a:hover{color:var(--brand);}
+  .social-row{display:flex;gap:12px;margin-top:26px;}
+  .social-row a{
+    width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--brand);color:var(--brand);
+    display:flex;align-items:center;justify-content:center;
+    font-size:0.78rem;font-weight:700;
+    transition:background .25s ease, color .25s ease, transform .25s ease;
+  }
+  .social-row a:hover{background:var(--brand);color:#fff;transform:translateY(-3px);}
+
+  .contact-form{background:var(--paper);padding:50px;}
+  .contact-form h3{font-size:1.25rem;margin-bottom:20px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .contact-form input, .contact-form textarea, .contact-form select{
+    width:100%;padding:13px 14px;
+    border:1px solid var(--line);
+    border-radius:0;
+    font-family:'Inter',sans-serif;
+    font-size:0.88rem;
+    background:#fff;
+    color:var(--ink);
+  }
+  .contact-form textarea{resize:vertical;min-height:100px;}
+  .contact-form label{font-size:0.74rem;font-weight:600;color:var(--ink-soft);display:block;margin-bottom:6px;letter-spacing:0.03em;text-transform:uppercase;}
+  .contact-form .full{margin-bottom:14px;}
+  .contact-form .btn-primary{width:100%;justify-content:center;margin-top:6px;}
+  .form-note{font-size:0.74rem;color:var(--taupe);margin-top:14px;text-align:center;}
+
+  @media(max-width:900px){
+    .contact-wrap{grid-template-columns:1fr;}
+    .contact-info,.contact-form{padding:34px 26px;}
+    .form-row{grid-template-columns:1fr;}
+  }
+
+  /* ===== Map ===== */
+  .map-section{padding:0 0 100px;background:var(--paper);}
+  .map-frame{box-shadow:var(--shadow);border:1px solid var(--line);}
+  .map-frame iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(15%);}
+
+  /* ===== Footer ===== */
+  footer{background:var(--brand-dark);color:rgba(255,255,255,0.78);padding:64px 0 24px;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+  .footer-logo-img{width:180px;height:auto;margin-bottom:20px;}
+  footer p{font-size:0.84rem;line-height:1.75;color:rgba(255,255,255,0.7);}
+  footer h4{color:#fff;font-size:0.85rem;margin-bottom:16px;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;}
+  footer ul li{margin-bottom:10px;}
+  footer ul a{font-size:0.84rem;color:rgba(255,255,255,0.72);transition:color .2s ease;}
+  footer ul a:hover{color:var(--gold-light);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:22px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-size:0.76rem;color:rgba(255,255,255,0.45);
+  }
+  @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* Floating WhatsApp button */
+  .float-btn{
+    position:fixed;bottom:26px;right:26px;z-index:60;
+    width:54px;height:54px;border-radius:50%;
+    background:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:1.3rem;
+    box-shadow:0 15px 35px -10px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="tb-links">
+      <span>7066 Airport Rd, Mississauga, ON L4T 2G8</span>
+      <span><a href="tel:+19056733131">+1 905-673-3131</a></span>
+    </div>
+    <div class="tb-links">
+      <span>Tue–Sun: 10am – 7pm · Mon Closed</span>
+      <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <nav class="container">
+    <a href="#home" class="logo">
+      <div class="logo-mark"><img src="assets/logo-mark.png" alt="Payal Beauty Laser Saloon logo"></div>
+      <div class="logo-text">
+        <div class="name">PAYAL</div>
+        <div class="sub">Beauty Laser Saloon</div>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+19056733131" class="btn btn-outline">Call Now</a>
+      <a href="#contact" class="btn btn-primary">Book Now</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow">Mississauga's Beauty Store &amp; Barbershop</span>
+      <h1>Premium Beauty <em>Products</em> &amp; Sharp Men's Grooming</h1>
+      <p>Payal Beauty Laser Saloon is your one-stop shop for professional beauty products — hair tools, skincare, makeup and more — plus a full men's barbershop for haircuts, beard trims and hot towel shaves.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a Barber Appointment</a>
+        <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener" class="btn btn-outline">View Instagram</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="num">15+</span><span class="lbl">Years in Business</span></div>
+        <div><span class="num">188+</span><span class="lbl">Instagram Followers</span></div>
+        <div><span class="num">6</span><span class="lbl">Days Open Weekly</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1610475680335-dafab5475150?auto=format&fit=crop&w=1000&q=80" alt="Barbershop interior">
+      <div class="hero-card">
+        <strong>Erum Shahzadi</strong>
+        <span>Owner, Payal Beauty Laser Saloon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-portrait reveal">
+      <img src="https://images.unsplash.com/photo-1629189784191-9afdcbcb0398?auto=format&fit=crop&w=800&q=80" alt="Barber giving a haircut">
+      <div class="frame-tag"><strong>Erum Shahzadi</strong>Payal Beauty Laser Saloon</div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">About Us</span>
+      <h2>Your Neighbourhood Beauty Store &amp; Barbershop</h2>
+      <p>Payal Beauty Laser Saloon is a beauty products store and men's barbershop in Mississauga, Ontario, proudly owned and run by Erum Shahzadi. We stock a wide range of professional beauty and hair-care products, and our barbers deliver sharp, precise cuts and classic grooming for men and boys of every age.</p>
+      <p>Whether you're stopping by to pick up your favourite hair tools and skincare, or booking a fresh cut and beard trim, our friendly team is here to take care of you.</p>
+      <div class="about-points">
+        <div class="point"><div class="ico">✧</div><div><strong>Skilled Barbers</strong><span>Precise cuts &amp; grooming</span></div></div>
+        <div class="point"><div class="ico">✦</div><div><strong>Beauty Products</strong><span>Trusted, industry-grade brands</span></div></div>
+        <div class="point"><div class="ico">✧</div><div><strong>Clean &amp; Welcoming</strong><span>Comfortable for all ages</span></div></div>
+        <div class="point"><div class="ico">✦</div><div><strong>Family Friendly</strong><span>Kids' haircuts welcome</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Barbershop</span>
+      <h2>Men's Grooming Services</h2>
+      <p>A full barbershop menu for men and boys — every cut and shave done with care, precision, and premium tools.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Men's haircut and line-up"></div><div class="body"><h3>Men's Haircut &amp; Line-Up</h3><p>Sharp, precise cuts and clean edge-ups for every style.</p></div></div>
+      <div class="service-card reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1629189784191-9afdcbcb0398?auto=format&fit=crop&w=600&q=80" alt="Skin fade haircut"></div><div class="body"><h3>Skin Fade &amp; Bald Fade</h3><p>Clean, blended fades cut to your exact preference.</p></div></div>
+      <div class="service-card reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Beard trim and grooming"></div><div class="body"><h3>Beard Trim &amp; Grooming</h3><p>Shaping, trimming and conditioning for a well-groomed beard.</p></div></div>
+      <div class="service-card reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Hot towel shave"></div><div class="body"><h3>Hot Towel Shave</h3><p>A classic, relaxing barbershop-style straight razor shave.</p></div></div>
+      <div class="service-card reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?auto=format&fit=crop&w=600&q=80" alt="Kids haircut at barbershop"></div><div class="body"><h3>Kids Haircut</h3><p>Patient, friendly cuts for younger clients in a relaxed setting.</p></div></div>
+      <div class="service-card reveal"><div class="thumb"><img src="https://images.unsplash.com/photo-1598524374912-6b0b0bab43dd?auto=format&fit=crop&w=600&q=80" alt="Hair wash and styling"></div><div class="body"><h3>Hair Wash &amp; Styling</h3><p>Finishing wash, blow-dry and styling for a fresh, clean look.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="products-wrap reveal">
+      <div class="products-copy">
+        <span class="eyebrow">In The Store</span>
+        <h2>Beauty &amp; Grooming Products We Sell</h2>
+        <p>We stock a wide range of professional, industry-standard beauty and grooming products and tools — visit us in-store to browse and buy.</p>
+      </div>
+      <div class="product-tags">
+        <span>Hair Dryers</span>
+        <span>Hair Straighteners</span>
+        <span>Hair Curlers</span>
+        <span>Face Creams &amp; Moisturizers</span>
+        <span>Cleansers &amp; Toners</span>
+        <span>Facial Kits</span>
+        <span>Makeup &amp; Cosmetics</span>
+        <span>Nail Polish &amp; Nail Care Kits</span>
+        <span>Clippers &amp; Trimmers</span>
+        <span>Beard Oils &amp; Grooming Kits</span>
+        <span>Hair Color &amp; Bleach</span>
+        <span>Steamers &amp; Skin Care Devices</span>
+        <span>Keratin &amp; Hair Treatment Products</span>
+        <span>Henna &amp; Mehndi Cones</span>
+        <span>Many more premium beauty products</span>
+      </div>
+    </div>
+
+    <div class="shop-grid">
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1522338140505-e18f9b660718?auto=format&fit=crop&w=500&q=80" alt="Professional ionic hair dryer"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Hair Tools</span>
+          <h4>Professional Ionic Hair Dryer</h4>
+          <span class="shop-price">From $85</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1522336284037-91f7da073525?auto=format&fit=crop&w=500&q=80" alt="Ceramic flat iron hair straightener"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Hair Tools</span>
+          <h4>Ceramic Flat Iron Straightener</h4>
+          <span class="shop-price">From $60</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1522335579571-b6f6e7c68371?auto=format&fit=crop&w=500&q=80" alt="Professional curling iron"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Hair Tools</span>
+          <h4>Professional Curling Iron</h4>
+          <span class="shop-price">From $70</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=500&q=80" alt="Nail polish bottles"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Nail Care</span>
+          <h4>Nail Polish (Single Bottle)</h4>
+          <span class="shop-price">From $14</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80" alt="Keratin hair treatment mask"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Hair Care</span>
+          <h4>Keratin Hair Treatment Mask</h4>
+          <span class="shop-price">From $32</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=500&q=80" alt="Professional makeup brush set"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Makeup</span>
+          <h4>Professional Makeup Brush Set</h4>
+          <span class="shop-price">From $24</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=500&q=80" alt="Face moisturizer cream"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Skin Care</span>
+          <h4>Face Moisturizer &amp; Cream</h4>
+          <span class="shop-price">From $28</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1610461888750-10bfc601b087?auto=format&fit=crop&w=500&q=80" alt="Henna mehndi cones"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Mehndi</span>
+          <h4>Henna / Mehndi Cones (Pack)</h4>
+          <span class="shop-price">From $8</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?auto=format&fit=crop&w=500&q=80" alt="Hair clippers and trimmers"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Barber Tools</span>
+          <h4>Clippers &amp; Trimmers</h4>
+          <span class="shop-price">From $45</span>
+        </div>
+      </div>
+      <div class="shop-card reveal">
+        <div class="shop-thumb"><img src="https://images.unsplash.com/photo-1699373381578-2663708d7f02?auto=format&fit=crop&w=500&q=80" alt="Beard oil and grooming kit"></div>
+        <div class="shop-body">
+          <span class="shop-cat">Men's Grooming</span>
+          <h4>Beard Oil &amp; Grooming Kit</h4>
+          <span class="shop-price">From $18</span>
+        </div>
+      </div>
+    </div>
+    <p class="shop-note reveal">Prices are approximate starting rates and may vary by brand and availability — please call or visit the store for exact current pricing.</p>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Glimpses</span>
+      <h2>A Peek Inside Our Store</h2>
+      <p>Follow us on Instagram <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener" style="color:var(--gold-dark);font-weight:600;">@payal_beauty_laser_saloon</a> for our latest products, cuts and shop updates.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <a class="g1" href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1610475680335-dafab5475150?auto=format&fit=crop&w=900&q=80" alt="Barbershop interior"></a>
+      <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Men's haircut"></a>
+      <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Hot towel shave"></a>
+      <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Beard grooming tools"></a>
+      <a class="g5" href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1717122639077-5d29504b4eb5?auto=format&fit=crop&w=900&q=80" alt="Product shelf display"></a>
+      <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?auto=format&fit=crop&w=600&q=80" alt="Kids haircut"></a>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Client Love</span>
+      <h2>What Our Clients Say</h2>
+    </div>
+    <div class="t-marquee reveal">
+      <div class="t-track" id="tTrack">
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best fade I've had in Mississauga. Clean line-up, friendly barbers, and never a long wait."</p>
+          <div class="t-name"><div class="t-avatar">A</div><div><strong>Aaron Wilson</strong><span>Regular Client, Mississauga</span></div></div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Great selection of hair tools and skincare products — better prices than the mall, and the staff actually know the products."</p>
+          <div class="t-name"><div class="t-avatar">S</div><div><strong>Sarah Campbell</strong><span>Regular Customer, Brampton</span></div></div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Took my son for his first haircut here — the barber was so patient with him. Will be our regular spot."</p>
+          <div class="t-name"><div class="t-avatar">J</div><div><strong>James Miller</strong><span>Parent, Oakville</span></div></div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"The hot towel shave is worth it alone. Relaxing, sharp razor work, and a genuinely nice atmosphere."</p>
+          <div class="t-name"><div class="t-avatar">E</div><div><strong>Ethan Thompson</strong><span>Regular Client, Mississauga</span></div></div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Found beard oil and grooming products here I couldn't get anywhere else nearby. Good quality, fair prices."</p>
+          <div class="t-name"><div class="t-avatar">P</div><div><strong>Paul Sharma</strong><span>Customer, Mississauga</span></div></div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Very clean, very professional, and the barbers genuinely take their time to get the cut right."</p>
+          <div class="t-name"><div class="t-avatar">M</div><div><strong>Michael Brown</strong><span>Regular Client, Toronto</span></div></div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"My go-to shop for hair straighteners and styling tools — knowledgeable staff who helped me pick the right one."</p>
+          <div class="t-name"><div class="t-avatar">N</div><div><strong>Natasha Reynolds</strong><span>Customer, Mississauga</span></div></div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Consistent, sharp haircuts every time. This is the only barbershop I trust with a fade."</p>
+          <div class="t-name"><div class="t-avatar">C</div><div><strong>Chris Lee</strong><span>Regular Client, Etobicoke</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-wrap reveal">
+      <div class="contact-info">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Book Your Appointment Today</h2>
+        <p class="lead">Reach out by phone, Instagram, or the form and our team will confirm your slot with Erum Shahzadi and her team.</p>
+
+        <div class="info-row"><div class="ico">◆</div><div><strong>Address</strong><span>7066 Airport Rd, Mississauga, ON L4T 2G8, Canada</span></div></div>
+        <div class="info-row"><div class="ico">◆</div><div><strong>Phone</strong><a href="tel:+19056733131">+1 905-673-3131</a></div></div>
+        <div class="info-row"><div class="ico">◆</div><div><strong>Hours</strong><span>Tue – Sun: 10:00 AM – 7:00 PM<br>Monday: Closed</span></div></div>
+        <div class="info-row"><div class="ico">◆</div><div><strong>Instagram</strong><a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener">@payal_beauty_laser_saloon</a></div></div>
+
+        <div class="social-row">
+          <a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="tel:+19056733131" aria-label="Call">☎</a>
+          <a href="https://wa.me/19056733131" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="bookingForm">
+        <h3>Request a Booking</h3>
+        <div class="form-row">
+          <div><label for="fname">Full Name</label><input type="text" id="fname" name="fname" placeholder="Your name" required></div>
+          <div><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="Your phone" required></div>
+        </div>
+        <div class="full">
+          <label for="service">Service / Inquiry</label>
+          <select id="service" name="service">
+            <option>Men's Haircut &amp; Line-Up</option>
+            <option>Skin Fade &amp; Bald Fade</option>
+            <option>Beard Trim &amp; Grooming</option>
+            <option>Hot Towel Shave</option>
+            <option>Kids Haircut</option>
+            <option>Hair Wash &amp; Styling</option>
+            <option>Product Inquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg" placeholder="Preferred date/time or any details..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Booking Request</button>
+        <p class="form-note">We'll confirm your appointment by phone or Instagram DM.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <div class="map-frame reveal">
+      <iframe src="https://www.google.com/maps?q=7066+Airport+Rd,+Mississauga,+ON+L4T+2G8&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo-img" src="assets/logo-full-light.png" alt="Payal Beauty Laser Saloon">
+
+        <p>A beauty products store and men's barbershop in Mississauga, ON, owned by Erum Shahzadi — dedicated to great products and sharp cuts.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Barbershop</h4>
+        <ul>
+          <li><a href="#services">Men's Haircut</a></li>
+          <li><a href="#services">Beard Trim</a></li>
+          <li><a href="#services">Hot Towel Shave</a></li>
+          <li><a href="#services">Kids Haircut</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>7066 Airport Rd, Mississauga, ON L4T 2G8</li>
+          <li><a href="tel:+19056733131">+1 905-673-3131</a></li>
+          <li><a href="https://www.instagram.com/payal_beauty_laser_saloon" target="_blank" rel="noopener">@payal_beauty_laser_saloon</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Payal Beauty Laser Saloon. All rights reserved.</span>
+      <span>Erum Shahzadi · Payal Beauty Laser Saloon</span>
+    </div>
+  </div>
+</footer>
+
+<a class="float-btn" href="https://wa.me/19056733131" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const tTrack = document.getElementById('tTrack');
+  if (tTrack) {
+    tTrack.innerHTML += tTrack.innerHTML;
+  }
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+
+  const bookingForm = document.getElementById('bookingForm');
+  bookingForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thank you! Your booking request has been noted. Please call +1 905-673-3131 or message us on Instagram to confirm your appointment time.');
+    bookingForm.reset();
+  });
+</script>
+
+</body>
+</html>
